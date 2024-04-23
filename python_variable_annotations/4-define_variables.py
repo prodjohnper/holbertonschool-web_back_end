@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     Variables a, an integer with a value of 1,
     pi, a flow with a value of 3.14, i_understand_annotations,

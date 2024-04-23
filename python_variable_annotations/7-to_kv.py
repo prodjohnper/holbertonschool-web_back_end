@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     Function to_kv with arguments k: str, v: Union[int, float]
     that returns a tuple containing k and the square of v

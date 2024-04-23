@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     Function that takes a string str1 and a string str2
     as arguments and returns their concatenation

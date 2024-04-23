@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 '''
     Function sum_mixed_list that takes a list mxd_lst of integers
     and floats as arguments and returns their sum as a float
