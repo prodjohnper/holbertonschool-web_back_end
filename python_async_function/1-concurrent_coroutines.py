@@ -2,8 +2,8 @@
 '''
     Async routine called wait_n that takes in 2 int arguments (in this order):
     n and max_delay. wait_n should return a list of all the delays (float
-    values). The list of the delays should be in ascending order without using sort()
-    because of concurrency.
+    values). The list of the delays should be in ascending order without using
+    sort() because of concurrency.
 '''
 import asyncio
 from typing import List
