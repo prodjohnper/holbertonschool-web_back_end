@@ -12,5 +12,4 @@ async def task_wait_n(n: int, max_delay: int) -> List[float]:
         Function that takes in an integer n and
         max_delay and returns a asyncio.Task.
     '''
-
     return await wait_n(n, max_delay)
