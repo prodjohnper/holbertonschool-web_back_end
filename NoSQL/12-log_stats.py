@@ -10,7 +10,7 @@ if __name__ == "__main__":
         Function that provides some stats about Nginx logs stored in MongoDB
     '''
     # Number of logs
-    client = MongoClient('mongodb://localhost:27017/')
+    client = MongoClient('mongodb://127.0.0.1:27017/')
     collection = client.logs.nginx
 
     # Number of documents
