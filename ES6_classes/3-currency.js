@@ -4,7 +4,6 @@ export default class Currency {
     this._name = name;
   }
 
-  // currency getter and setter
   get code() {
     return this.code;
   }
@@ -13,7 +12,6 @@ export default class Currency {
     this._code = value;
   }
 
-  // value getter and setter
   get name() {
     return this._name;
   }
@@ -22,9 +20,7 @@ export default class Currency {
     this._name = value;
   }
 
-  // displayFullCurrency method
   displayFullCurrency() {
-    // Return the value and currency in the following format: value (currency)
     return `${this._name} (${this._code})`;
   }
 }
