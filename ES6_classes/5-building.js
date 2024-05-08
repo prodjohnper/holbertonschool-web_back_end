@@ -1,33 +1,23 @@
 export default class Building {
   constructor(sqft) {
-    if (typeof sqft === 'number') {
-      this.sqft = sqft;
-    } else {
-      throw new Error('sqft must be a number');
+    // Check if the constructor is called with the new keyword
+    if (this.constructor !== Building && !this.evacuationWarningMessage) {
+      // Throw an error if the constructor is not called with the new keyword
+      throw Error(
+        'Class extending Building must override evacuationWarningMessage',
+      );
     }
+    // This is a private property
+    this._sqft = sqft;
   }
 
-  // sqft getter and setter
+  // sqft setter and getter
   get sqft() {
-    // Return the value of _sqft
+    // This is a private property
     return this._sqft;
   }
 
   set sqft(value) {
-    // Check if value is a number
-    if (typeof value === 'number') {
-      this._sqft = value;
-    } else {
-      // Throw an error if value is not a number
-      throw new Error('sqft must be a number');
-    }
-  }
-
-  // Static method to return error message
-  static evacuationWarningMessage() {
-    // Throw an error with the message
-    throw new Error(
-      'Class extending Building must override evacuationWarningMessage',
-    );
+    this._sqft = value;
   }
 }
