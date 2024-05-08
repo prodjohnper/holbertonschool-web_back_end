@@ -1,11 +1,17 @@
 export default class Airport {
   constructor(name, code) {
-    // Check if currency is a string
-    if (typeof name !== 'string' || typeof code !== 'string') {
-      throw new Error('Airport name and code must be strings');
+    // Check if name is a string
+    if (typeof name === 'string') {
+      this._name = name;
+    } else {
+      throw new Error('Name must be a string');
     }
-    this._name = name;
-    this._code = code;
+    // Check if code is a string
+    if (typeof code === 'string') {
+      this._code = code;
+    } else {
+      throw new Error('Code must be a string');
+    }
   }
 
   // Create a getter called name
