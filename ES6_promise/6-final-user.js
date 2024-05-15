@@ -21,6 +21,6 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
     // Return obj with the status and value
     .then((results) => results.map((result) => ({
       status: result.status,
-      value: result.status === 'fulfilled' ? result.value : result.reason,
+      value: result.status === 'fulfilled' ? result.value : result.reason.toString(),
     })));
 }
