@@ -10,7 +10,7 @@ const { uploadPhoto, createUser } = require('./utils');
 // Function that handles promises collectively
 export default function handleProfileSignup() {
   // Return a promise
-  Promise.all([uploadPhoto(), createUser()])
+  return Promise.all([uploadPhoto(), createUser()])
   // Handle the response
     .then((results) => {
     // Destructure the results
