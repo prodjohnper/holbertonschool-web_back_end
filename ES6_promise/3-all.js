@@ -5,7 +5,7 @@
 */
 
 // Import promises from utils.js
-const { uploadPhoto, createUser } = require('./utils');
+import { uploadPhoto, createUser } from './utils';
 
 // Function that handles promises collectively
 export default function handleProfileSignup() {
@@ -14,11 +14,9 @@ export default function handleProfileSignup() {
     // Handle the response
     .then((results) => {
     // Destructure the results
-      const profilePicture = results[0].body;
-      const name = results[1].firstName;
-      const { lastName } = results[1];
+      const [profilePicture, name] = results;
       // Log the results to the console
-      console.log(`${[profilePicture]} ${name} ${lastName}`);
+      console.log(`${[profilePicture.body]} ${name.firstName} ${name.lastName}`);
     })
     // Handle the error
     .catch(() => {
