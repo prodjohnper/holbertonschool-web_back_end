@@ -18,7 +18,7 @@ export default function handleProfileSignup() {
       const name = results[1].firstName;
       const { lastName } = results[1];
       // Log the results to the console
-      console.log(`${profilePicture} ${name} ${lastName}`);
+      console.log(`${[profilePicture]} ${name} ${lastName}`);
     })
     // Handle the error
     .catch(() => {
