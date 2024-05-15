@@ -14,9 +14,11 @@ export default function handleProfileSignup() {
   // Handle the response
     .then((results) => {
     // Destructure the results
-      const [photo, user] = results;
+      const profilePicture = results[0].body;
+      const name = results[1].firstName;
+      const lastName = results[1].lastName;
       // Log the results to the console
-      console.log(`${photo.body} ${user.firstName} ${user.lastName}`);
+      console.log(`${profilePicture} ${name} ${lastName}`);
     })
   // Handle the error
     .catch(() => {
