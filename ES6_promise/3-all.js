@@ -11,16 +11,16 @@ const { uploadPhoto, createUser } = require('./utils');
 export default function handleProfileSignup() {
   // Return a promise
   return Promise.all([uploadPhoto(), createUser()])
-  // Handle the response
+    // Handle the response
     .then((results) => {
     // Destructure the results
       const profilePicture = results[0].body;
       const name = results[1].firstName;
-      const lastName = results[1].lastName;
+      const { lastName } = results[1];
       // Log the results to the console
       console.log(`${profilePicture} ${name} ${lastName}`);
     })
-  // Handle the error
+    // Handle the error
     .catch(() => {
     // Log the error to the console
       console.log('Signup system offline');
