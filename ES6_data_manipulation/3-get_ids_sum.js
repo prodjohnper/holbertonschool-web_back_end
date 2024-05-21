@@ -1,5 +1,5 @@
 /*
-  3-get_ids_sums.js
+  3-get_ids_sum.js
 
   Function that returns the sum of all the student ids.
 */
